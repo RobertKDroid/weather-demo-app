@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_margin">16dp</dimen>
+    <dimen name="half_app_margin">8dp</dimen>
+    <dimen name="margin_big">60dp</dimen>
+    <dimen name="header_text_size">34sp</dimen>
+</resources>
