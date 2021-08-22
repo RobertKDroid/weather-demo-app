@@ -1,8 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id "org.jetbrains.kotlin.kapt"// version "1.5.21"
-//    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.21'
+    id "org.jetbrains.kotlin.kapt"
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
 }
