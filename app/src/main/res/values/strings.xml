@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">WeatherApp</string>
+    <string name="app_name">Weather forecast</string>
+    <string name="fetching_weather_failed_do_you_want_to_try_again">Fetching weather failed, do you want to try again?\nError: %1$s</string>
+    <string name="error">Error</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="date_min_max_day_values">Date: %1$s Min: %2$s Max: %3$s Day: %4$s</string>
+    <string name="date_temperature_values">%1$s %2$s</string>
+    <string name="temp_min">Temp. min.</string>
+    <string name="pressure">Pressure</string>
+    <string name="temp_max">Temp. max.</string>
+    <string name="wind">Wind</string>
+    <string name="wind_speed">%1$d m/s</string>
+    <string name="pressure_amount">%1$d hPa</string>
+    <string name="navigation_header">Navigation header</string>
+    <string name="dummy">Dummy</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

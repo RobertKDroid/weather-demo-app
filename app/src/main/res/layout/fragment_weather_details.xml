@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tuesday, 24-10-2020" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dailyTemperatureTextView"
+        style="@style/BlueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:textSize="@dimen/header_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateTextView"
+        tools:text="12°C" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dailyTemperatureIconImageView"
+        android:layout_width="@dimen/weather_icon_size"
+        android:layout_height="@dimen/weather_icon_size"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyTemperatureWeatherDetailsTextView"
+        app:layout_constraintEnd_toEndOf="@id/dailyTemperatureTextView"
+        app:layout_constraintTop_toTopOf="@+id/dailyTemperatureWeatherDetailsTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dailyTemperatureWeatherDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/quarter_app_margin"
+        android:layout_marginBottom="@dimen/half_app_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/cityNameTextView"
+        app:layout_constraintEnd_toStartOf="@id/dailyTemperatureIconImageView"
+        tools:text="windy" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cityNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTemperatureTextView"
+        app:layout_constraintVertical_bias="0.625"
+        tools:text="London"
+        tools:viewBindingIgnore="true" />
+
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:background="@color/gray_20"
+        app:layout_constraintEnd_toEndOf="@id/dailyTemperatureIconImageView"
+        app:layout_constraintStart_toStartOf="@id/cityNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/cityNameTextView" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temperatureMinimumLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/half_app_margin"
+        android:text="@string/temp_min"
+        app:layout_constraintEnd_toStartOf="@id/detailsGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerView"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temperatureMinimumValueTextView"
+        style="@style/BlueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        app:layout_constraintStart_toEndOf="@id/detailsGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/dividerView"
+        tools:text="12 °C" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temperatureMaximumLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/half_app_margin"
+        android:text="@string/temp_max"
+        app:layout_constraintEnd_toStartOf="@id/detailsGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureMinimumLabelTextView"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temperatureMaximumValueTextView"
+        style="@style/BlueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        app:layout_constraintStart_toEndOf="@id/detailsGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/temperatureMinimumValueTextView"
+        tools:text="12 °C" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pressureLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/half_app_margin"
+        android:text="@string/pressure"
+        app:layout_constraintEnd_toStartOf="@id/detailsGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureMaximumLabelTextView"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pressureValueTextView"
+        style="@style/BlueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        app:layout_constraintStart_toEndOf="@id/detailsGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/temperatureMaximumValueTextView"
+        tools:text="1000 hPa" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/windLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/half_app_margin"
+        android:text="@string/wind"
+        app:layout_constraintEnd_toStartOf="@id/detailsGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pressureLabelTextView"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/windValueTextView"
+        style="@style/BlueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        app:layout_constraintStart_toEndOf="@id/detailsGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/pressureLabelTextView"
+        tools:text="10 m/s" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
